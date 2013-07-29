@@ -1,0 +1,488 @@
+
+/*
+Style sheets for myGeo App
+Howard Livingston
+June, 2013
+*/
+
+
+@media all and (min-width: 650px){	
+	.left_side {
+		float: left;
+		width: 45%;
+		margin: 30px 0 20px 2%;
+		padding: 0 4% 0 0;
+	}
+	.right_side {
+		width: 45%;
+		float: right;
+		margin-top: 30px;
+		padding-right: 1%;
+	}
+	.right_side ul:first-child {
+		margin-top: 0;
+	}
+
+
+}
+@media all and (min-width: 750px){
+	.left_side {
+		width: 45%;
+	}
+	.right_side {
+		width: 45%;
+		padding-right: 1%;
+	}	
+}
+
+@media all and (min-width: 1200px){
+	.left_side {
+		width: 45%;
+		padding-left:3%;
+		margin: 30px 0 20px 0;
+	}
+	.right_side {
+		width: 45%;
+		padding-right: 3%;
+	}
+}
+
+#compass
+{
+	transform:rotate(0deg); /* in case someone creates a compliant browser */
+	-ms-transform:rotate(0deg); /* WP7 */
+	-webkit-transform:rotate(0deg); /* iOS and Android */
+}
+#instaPic{
+		max-width:100%;
+
+}
+
+
+
+/*Background Image-all pages*/
+.backgroundImage{background-image:url('http://4206e9.medialib.glogster.com/media/3251d86cddd8541195eb0ebe625a7af6fc8f2cdcb017dc5e2e21d6bb01783a81/old-paper-map-background-for-glogster.jpg');
+		max-width:100%; 
+		max-height:100%;
+}
+
+/*landing page "start navigating button*/
+.landButton{
+		text-align:center;
+		padding-top:6px;
+
+}
+
+/*landing Page Compass*/
+.landingCompass{
+
+		
+	display: block;
+	margin-left: auto;
+   	margin-right: auto;	
+
+
+}
+/*Landing page box*/
+.boxed {
+		border-style:solid;
+		border-width:5px;
+		border-color:#a64a00;
+   		background: -webkit-linear-gradient(top, #ffd073, #ffd073);
+    	background: -moz-linear-gradient(top, #ffd073, #ffd073);
+    	background: -o-linear-gradient(top, #ffd073, #ffd073);
+    	background: -ms-linear-gradient(top, #ffd073, #ffd073);
+    	background: linear-gradient(top, #ffd073, #ffd073);
+    	-webkit-border-radius: 50px;
+    	-khtml-border-radius: 50px;
+    	-moz-border-radius: 30px;
+    	border-radius: 50px;
+    	-webkit-box-shadow: 0 8px 0 #1b383b;
+    	-moz-box-shadow: 0 8px 0 #1b383b;
+    	box-shadow: 0 8px 0 #1b383b;
+    	text-shadow: 0 2px 2px rgba(255, 255, 255, 0.2);
+
+}
+
+/* Landing Page Title */
+#logo h1, #logo p {
+		text-align: center;
+}
+
+
+/* Header */
+.menu-wrapper {
+		overflow: hidden;
+		height: 52px;
+		margin-bottom: 2em;
+		background: #000000;
+}
+
+/*Page headers*/
+.ui.header{
+		background: -webkit-linear-gradient(#811217, #c1272d);
+
+
+}
+
+/*page titles*/
+.ui-title{
+		color:white;
+		font: normal small-caps bold 34px "Charlemagne Std";
+			
+			}
+
+
+/*all other titles*/
+.title{
+		font-size:50px;
+		text-align:center;
+		color:white;
+
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+/*Stylings for the headers and paragraphs as listed*/
+h1, h2, h3 {
+		
+		text-transform: uppercase;
+		color:white;
+		font: normal small-caps bold 34px "Georgia", serif;
+		text-align:center;
+}
+
+h1 {
+		font-size: 2em;
+		color:white;
+		text-align:center;
+	
+}
+
+h2 {
+		font-size: 2.8em;
+}
+
+h3 {
+		font-size: 1.6em;
+		color:white;
+}
+
+h4{
+		font-size:20px;
+		color:white;
+		text-align:center;
+
+}
+
+h5 {
+		text-align:center;
+		color:white;
+		font-size:20px;
+
+}
+
+p{
+		color:black;
+		padding-top: 5px;  
+      	padding-bottom: 5px;  
+      	padding-right: 5px;  
+      	padding-left: 30px; 
+
+}
+
+p1{
+		color:green;
+		padding-left:425px;
+
+}
+
+li{
+		text-align:center;
+		color:white;
+		font-size:20px;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+/*List color*/
+
+/*Accelerometer Page*/
+
+#sphere {
+	position:absolute;
+	width:150px;
+	height:150px;
+	border-radius:50px;-
+	webkit-radius:50px;
+	background-color:#00ff00;
+}
+
+/*Compass Page comapss*/
+#imgCompass{
+		text-align:center;
+		position:absolute;
+}
+
+#imgNeedle{
+		text-align:center;
+		position:absolute;
+
+
+}
+
+
+/*My Geo text on landing page*/
+div.layout{
+		text-align: center;
+
+}
+
+/*My Geo text stylings*/
+.coordinates{
+		font-family:"Times New Roman", Times, serif;
+		font-size:22px;
+		color:gold;
+  		text-align: left;
+  		width: 200px;
+  		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+		padding-top:10px;
+}
+
+.geoValues{
+		color:white;
+
+
+
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+/*stylings for the buttons*/
+
+#PageRefresh{
+		-moz-box-shadow:inset 0px 1px 0px 0px #A62500;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+		background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+		background-color:#FF2C00;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:1px solid #eeb44f;
+		
+		font-family:arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:1px 1px 0px #FF2C00;
+}
+
+
+#GeoPageRefresh{
+		-moz-box-shadow:inset 0px 1px 0px 0px #A62500;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+		background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+		background-color:#FF2C00;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:1px solid #eeb44f;
+		
+		font-family:arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:1px 1px 0px #FF2C00;
+		
+
+
+}
+.button {
+	
+		-moz-box-shadow:inset 0px 1px 0px 0px #A62500;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+		background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+		background-color:#ffc477;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:1px solid #eeb44f;
+		color:#ffffff;
+		font-family:arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:1px 1px 0px #cc9f52;
+		
+		
+}
+
+/*Button text*/
+span.ui-btn-text{
+
+		color:white;
+
+}
+
+/*Button States*/
+.button:hover {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
+		background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
+		background-color:#fb9e25;
+}.button:active {
+		position:relative;
+		top:1px;
+}
+ 
+ 
+/*home page button*/
+.homeButton {
+		-moz-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		-webkit-box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		box-shadow:inset 0px 1px 0px 0px #fce2c1;
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ffc477), color-stop(1, #fb9e25) );
+		background:-moz-linear-gradient( center top, #ffc477 5%, #fb9e25 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffc477', endColorstr='#fb9e25');
+		background-color:#ffc477;
+		-moz-border-radius:6px;
+		-webkit-border-radius:6px;
+		border-radius:6px;
+		border:1px solid #eeb44f;
+		display:inline-block;
+		color:#ffffff;
+		font-family:arial;
+		font-size:15px;
+		font-weight:bold;
+		padding:6px 24px;
+		text-decoration:none;
+		text-shadow:1px 1px 0px #cc9f52;
+		
+}.homeButton:hover {
+		background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #fb9e25), color-stop(1, #ffc477) );
+		background:-moz-linear-gradient( center top, #fb9e25 5%, #ffc477 100% );
+		filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fb9e25', endColorstr='#ffc477');
+		background-color:#fb9e25;
+}
+
+.homeButton:active {
+		position:relative;
+		top:1px;
+}
+
+
+
+ 
+/*Hover Styles*/
+a.button:hover {
+    	background: #3d7a80;
+    	background: -webkit-linear-gradient(top, #3d7a80, #2f5f63);
+    	background: -moz-linear-gradient(top, #3d7a80, #2f5f63);
+    	background: -o-linear-gradient(top, #3d7a80, #2f5f63);
+    	background: -ms-linear-gradient(top, #3d7a80, #2f5f63);
+    	background: linear-gradient(top, #3d7a80, #2f5f63);
+}
+
+/*Stylings for mouse hover*/
+a:hover {
+}
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+/*Images and responsive design*/
+
+
+/*images for buttons */
+.sectionImages{
+		width:100px;
+		height:100px;
+		display: block;
+  		margin-left: auto;
+  		margin-right: auto;
+		padding-bottom:50px;
+	
+}
+
+
+environment.png{
+	max-width:100%;
+
+}
+
+acc.png{
+	max-width:100%;
+
+}
+
+angleCompass.png{
+	max-width:100%;
+
+}
+
+books.png{
+	max-width:100%;
+
+}
+
+compass.png{
+	max-width:100%;
+
+}
+
+geo.png{
+	max-width:100%;
+
+}
+
+goldCompass.jpeg{
+	max-width:100%;
+
+}
+localWeather.png{
+	max-width:100%;
+
+}
+
+redCompass.png{
+	max-width:100%;
+
+}
+
+twitterIcon.png{
+	max-width:100%;
+
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////*/
+
+.greenAndroid {
+   	padding:1px;
+   	border:1px solid #021a40;
+   	background-color:#ff0;
+   	display: block;
+	margin-left: auto;
+   	margin-right: auto;
+   	
+}			
+
+
