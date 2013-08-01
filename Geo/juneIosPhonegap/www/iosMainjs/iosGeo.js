@@ -1,22 +1,24 @@
 
 //Howard Livingston
-//AVF with Jen Mccrrick
-//13/06
+//AVF with Jen Mccarrick
+//13/07
 //Android Javascript
 
 
 
+ 
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
 //To be run on start up
 function onDeviceReady() {
+	pictureSource=navigator.camera.PictureSourceType;
+    destinationType=navigator.camera.DestinationType;
 	phoneGapReady.innerHTML = "";
-    alert("The device is ready!");
-    
     screenOutput();
     
 }  
+
 
 //API Section
 
@@ -86,8 +88,87 @@ var getWeather = function () {
 
 //NATIVE FEATURES
 
+//Camera
+
+	  var pictureSource;   // picture source
+ 	  var destinationType; // sets the format of returned value
+
+function onPhotoDataSuccess(imageData) {
+      // Uncomment to view the base64-encoded image data
+      // console.log(imageData);
+
+      // Get image handle
+      //
+      var smallImage = document.getElementById('smallImage');
+
+      // Unhide image elements
+      //
+      smallImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      smallImage.src = "data:image/jpeg;base64," + imageData;
+    }
+
+    // Called when a photo is successfully retrieved
+    //
+    function onPhotoURISuccess(imageURI) {
+      // Uncomment to view the image file URI
+      // console.log(imageURI);
+
+      // Get image handle
+      //
+      var largeImage = document.getElementById('largeImage');
+
+      // Unhide image elements
+      //
+      largeImage.style.display = 'block';
+
+      // Show the captured photo
+      // The inline CSS rules are used to resize the image
+      //
+      largeImage.src = imageURI;
+    }
+
+    // A button will call this function
+    //
+    function capturePhoto() {
+      // Take picture using device camera and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function capturePhotoEdit() {
+      // Take picture using device camera, allow edit, and retrieve image as base64-encoded string
+      navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20, allowEdit: true,
+        destinationType: destinationType.DATA_URL });
+    }
+
+    // A button will call this function
+    //
+    function getPhoto(source) {
+      // Retrieve image file location from specified source
+      navigator.camera.getPicture(onPhotoURISuccess, onFail, { quality: 50,
+        destinationType: destinationType.FILE_URI,
+        sourceType: source });
+    }
+
+    // Called if something bad happens.
+    //
+    function onFail(message) {
+      alert('Failed because: ' + message);
+    }
+
+
+
+
+
 //Geolocation
 var myLocation = function() {
+		
    		var onSuccess = function(position) {
    		
    			$('ul class="currentLocation">' + '<li><h3>Your location is...</h3></li>' + '</ul>').appendTo('#myLocal');
@@ -99,6 +180,7 @@ var myLocation = function() {
           	      	'<li>Timestamp: ' + position.timestamp        +'time'+'</li>' +
           	      '</ul>'
           	  ).appendTo('#myLocal');
+          	  
           	  
           	 };
 
@@ -113,6 +195,36 @@ var myLocation = function() {
 
 
 };
+
+//Picture with Geolocation
+var myPicLocation = function() {
+		
+   		var onSuccess = function(position) {
+   			$('ul class="currentLocation">' + '<li><h3>Your coordinates at the time this pic was taken is...</h3></li>' + '</ul>').appendTo('#myPicLocal');
+   				$('' +
+   				  '<ul class="coordinates">' +
+    			  	'<li>Latitude: ' + position.coords.latitude  +'lat'+'</li>' +
+          		  	'<li>Longitude: ' + position.coords.longitude +'long'+'</li>' +
+          		  	'<li>Altitude: '  + position.coords.altitude  +'alt'+'</li>' +
+          	      	'<li>Timestamp: ' + position.timestamp        +'time'+'</li>' +
+          	      '</ul>'
+          	  ).appendTo('#myPicLocal');
+          	  
+          	 };
+
+
+    	var onError = function(error) {
+        	alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
+    };
+
+
+			navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+
+};
+
+
 
 //Accelerometer 
 //The "accel fired" alert on line 176 works so I know I'm inside the function
@@ -191,9 +303,11 @@ var checkConnection = function () {
             states[Connection.CELL]     = 'Cell generic connection';
             states[Connection.NONE]     = 'No network connection';
 
-            alert('Connection type: ' + states[networkState]);
+            $('#connection').append("<li>Connection type: " + states[networkState] + "</li>");
+        	$("#connection").listview('refresh'); 
 
 }
+
 
 //Get Device fires when prompted 
  var getDevice = function(){
@@ -208,6 +322,7 @@ else
 {
    alert('You are not using a mobile device!');
 }
+
 var isiPad = /ipad/i.test(navigator.userAgent.toLowerCase());
 if (isiPad)
 {
@@ -227,6 +342,54 @@ else
 }
 
 
+//MASHUP CODE----Geolocation + Connectivity status/all displayed
+
+//MASHUP Geolocation
+var myGeoLocation = function() {
+		
+   		var onSuccess = function(position) {
+   			$('ul class="currentLocation">' + '<li><h3>Your Mashup coordinates are...</h3></li>' + '</ul>').appendTo('#GeoAndConnect');
+   				$('' +
+   				  '<ul class="coordinates">' +
+    			  	'<li>Latitude: ' + position.coords.latitude  +'lat'+'</li>' +
+          		  	'<li>Longitude: ' + position.coords.longitude +'long'+'</li>' +
+          		  	'<li>Altitude: '  + position.coords.altitude  +'alt'+'</li>' +
+          	      	'<li>Timestamp: ' + position.timestamp        +'time'+'</li>' +
+          	      '</ul>'
+          	  ).appendTo('#GeoAndConnect');
+          	  
+          	 };
+
+
+    	var onError = function(error) {
+        	alert('code: '    + error.code    + '\n' +
+                'message: ' + error.message + '\n');
+    };
+
+
+			navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+
+};
+
+//Mashup Connection Check
+var myConnectionForGeo = function () {
+            var networkState = navigator.connection.type;
+
+            var states = {};
+            states[Connection.UNKNOWN]  = 'Unknown connection';
+            states[Connection.ETHERNET] = 'Ethernet connection';
+            states[Connection.WIFI]     = 'WiFi connection';
+            states[Connection.CELL_2G]  = 'Cell 2G connection';
+            states[Connection.CELL_3G]  = 'Cell 3G connection';
+            states[Connection.CELL_4G]  = 'Cell 4G connection';
+            states[Connection.CELL]     = 'Cell generic connection';
+            states[Connection.NONE]     = 'No network connection';
+
+            $('#geoConnection').append("<li>Connection type: " + states[networkState] + "</li>");
+        	
+
+}
 
 
 //onClick Events
@@ -238,7 +401,6 @@ $('#PageRefresh').click(function () {
 
 //Get Geolocaton--2 bring in location manually
 $('#GeoPageRefresh').on('click', function () {
-	console.log("Geo page loaded!");
     myLocation();
 
 });
@@ -252,18 +414,34 @@ $('#getAccel').on('click', function () {
 
 //Get Device Info
 $('#getDevice').on('click', function () {
-	console.log("Here's your current device");
     getDevice();
 
 });
 
+//Get connection Status
 $('#connection').on('click', function () {
-	console.log("Here's your connection status");
     checkConnection();
 
 });
 
+
+//Get Pic and Geolocation--MASHUP#1
+$('#getPosAndPic').on('click', function () {
+	myPicLocation();
+	capturePhoto();
+
+});
+
+//Get Geolocation and Connection Status--MASHUP#2
+$('#getGeoAndConnect').on('click', function () {
+	myConnectionForGeo();
+	myGeoLocation();
+
+});
+
 	
+
+
 //Page init functions
 
 $('#home').on('pageinit', function(){
@@ -282,10 +460,6 @@ $('#research').on('pageinit', function(){
 $('#environment').on('pageinit', function(){
 		console.log("Environment page loaded!");
 		getWeather();
- });
-
-$('#compassPage').on('pageinit', function(){
-		console.log("compass page loaded!");
 });
 
 $('#accPage').on('pageinit', function(){
@@ -295,8 +469,7 @@ $('#accPage').on('pageinit', function(){
 
 $('#geoPage').on('pageinit', function(){
 		console.log("Geo page loaded!");
-			
-		
+				
 });
 
 $('#mydevice').on('pageinit', function(){

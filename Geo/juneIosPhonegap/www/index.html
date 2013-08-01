@@ -12,7 +12,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="iosCss/jquery.mobile.structure-1.3.1.css" type="text/css"/>
-    <link rel="stylesheet" href="iosCss/iosGeo.css"/>
+    <link rel="stylesheet" href="iosCss/iosGeo.css" media="all and (max-width: 1024px)"/>
     <script src="iosMainjs/modernizr.custom.min.js"></script>
 
     <!--
@@ -36,7 +36,7 @@ AVF-with Jen Mccarrick
   				      <img src="iosImages/angleCompass.png" class="landingCompass" alt="landingCompass">
 
   				<div class="landButton">
-  					<a data-ajax="false" data-role="button" data-mini="true" href="#startHere" class="button">
+  					<a data-ajax="false" data-role="button" data-mini="true" href="#startHere" class="research">
         				Start Navigating!!
       				</a>
       			</div>
@@ -46,7 +46,7 @@ AVF-with Jen Mccarrick
     			<footer data-role="footer" data-position="fixed"></footer>
     		</div>
     
-    				<!--"MyGeo" Navigation Page-->
+<!--"MyGeo" Navigation Page-->
     
     		<div data-role="page" id="startHere">
   				<header class="menu-wrapper">
@@ -59,7 +59,7 @@ AVF-with Jen Mccarrick
   					<h1>
   							<img src="iosImages/redApple.png" class="redApple" alt="redApple">
   					</h1>
-  					<a data-ajax="false" data-role="button" data-mini="true" href="#home" class="button">
+  					<a data-ajax="false" data-role="button" data-mini="true" href="#home" class="homeButton">
         				View Landing Page
       				</a>
       
@@ -68,25 +68,25 @@ AVF-with Jen Mccarrick
   					
     					<p>
       						<img src="iosImages/books.png" class="sectionImages" alt="weeklyResearch">
-  								<a data-ajax="false" data-role="button" data-mini="true" href="#research" class="button">
+  								<a data-ajax="false" data-role="button" data-mini="true" href="#research" class="research">
         							Weekly Research
       							</a>
     					</p>
     					<p>
       						<img src="iosImages/geo.png" class="sectionImages" alt="environment">
-  								<a data-ajax="false" data-role="button" data-mini="true" href="#environment" class="button">
+  								<a data-ajax="false" data-role="button" data-mini="true" href="#environment" class="research">
         							ENVIRONMENT-NATIVE FEATURES & Weather API
       							</a>
     					</p>
     					<p>
       						<img src="iosImages/instagram.png" class="sectionImages" alt="instagram">
-  								<a data-ajax="false" data-role="button" data-mini="true" href="#apiPage" class="button">
+  								<a data-ajax="false" data-role="button" data-mini="true" href="#apiPage" class="research">
         							Instagram-API
       							</a>
     					</p>
     					<p>
       						<img src="iosImages/mashup.png" class="sectionImages" alt="mashup">
-  								<a data-ajax="false" data-role="button" data-mini="true" href="#mashupPage" class="button">
+  								<a data-ajax="false" data-role="button" data-mini="true" href="#mashupPage" class="research">
         							Week Four Mash-Up
       							</a>
     					</p>
@@ -95,7 +95,7 @@ AVF-with Jen Mccarrick
   				<footer data-role="footer" data-position="fixed"></footer>
   			</div>	
   			
-  			<!--Weekly Research Page-->
+  <!--Weekly Research Page-->
   
   			<div data-role="page" id="research">
 				<header class="menu-wrapper">
@@ -104,16 +104,16 @@ AVF-with Jen Mccarrick
       				</h1>
   				</header>
     				<p>
-      					<a data-ajax="false" data-mini="true" data-role="button" href="#startHere" class="button" >
-        					Back Home
+      					<a data-ajax="false" data-mini="true" data-role="button" href="#environment" class="homeButton" >
+        					Back
       					</a>
     				</p>
     
     				<!--Here are the weekly research assignments in collapsible sets-->
     
     			<div data-role="collapsible" data-mini="true" data-collapsed="true">
-      				<h2 class="homeButton">
-        				2
+      				<h2 class="research">
+        				Week 2
       				</h2>
       				<div class="boxed">
       				
@@ -185,8 +185,8 @@ AVF-with Jen Mccarrick
           			</div>
     			</div>
 				<div data-role="collapsible" data-mini="true" data-collapsed="true">
-      				<h2 class="homeButton">
-        				3
+      				<h2 class="research">
+        				Week 3
       				</h2>
       				<div class="boxed">
       					<div>
@@ -225,13 +225,142 @@ AVF-with Jen Mccarrick
 								to convey thoughts and ideas in a way that plain text never could.
       						</p>
       					</div>
-      				</div>
-    			</div>
-    			<footer data-role="footer" data-mini="true" data-position="fixed"></footer>
-  			</div>
+      				<footer data-role="footer" data-mini="true" data-position="fixed"></footer>
+      			</div>
+      		</div>
+      		
+				<div data-role="collapsible" data-mini="true" data-collapsed="true">
+      				<h2 class="research">
+        				Week 4
+      				</h2>
+      				<div class="boxed">
+      					<div>
+      						<p>
+									Howie Livingston<br>
+									2013,July<br>
+									VFW with Jen McCarrick<br>
+
+						<strong>What are the 'top selling' app categories in the U.S.? Japan? Great Britain?</strong><br>
+								From the MobiThinking website comes these statistics for most popular apps in the US.<br>
+								We like our games<br>
+								Distimo (2012 Year in review): The most downloaded apps are<br>
+								Games (33 percent);<br>
+								Widgets (8 percent);<br>
+								Entertainment (7 percent);<br>
+								Social (5 percent);<br>
+								Lifestyle; music; photography; productivity (all 4 percent);<br>
+								Tools; communication; utilities (all 3 percent).<br>
+						<strong>Games also dominate app revenues.</strong><br>
+								• Portio Research (April 2013) calculates: top categories (by number of apps) on the Apple App Store:<br>
+								Games (17 percent of all apps in store);<br>
+								Google Play: games (15 percent);<br>
+								BlackBerry World: books (15 percent)<br>
+								Games (9 percent);<br>
+								Windows Phone Store: entertainment (19 percent)<br>
+								Tools & productivity (15 percent)<br>
+								Games (12 percent).
+						<strong>The second most popular app category, overall, after games is messaging apps, also known as over-the-top (OTT) apps, according to Portio.</strong><br>
+								It is estimated that there are at least 1 billion OTT messaging apps users around the world. The most popular of these are: Facebook Messenger (700 million users worldwide);<br>
+								WeChat (300 million);<br>
+								What’sApp (200 million);<br>
+								Viber (175 million);<br>
+								Line (100 million);<br>Kakao Talk (70 million);<br>
+								BBM (60 million);<br>
+								iMesssage (45 million);<br>
+								ChatON (10 million);<br>
+								Skype (10 million).<br>
+
+						<strong>Japan</strong><br>
+
+								It was interesting to see the different types of apps and which ones are more popular in the differing regions of the world.<br> 
+								What did surprise me, was the difference in app popularity in China and Japan. Although they are in close proximity, and share a similar culture,<br> 
+								the apps that are most popular were on different ends of the spectrum.<br>
+
+								Studies show that in Japan, utility and productivity apps were the most popular category of downloaded apps.<br>
+								These are apps like weather, geolocation or any app that would help improve daily life through technology.<br>
+								This would be extremely useful when determining what apps to produce for what market when thinking globally.<br>
+
+						<strong>The Uk</strong><br>
+
+								From the same study, it shows that arcade and action games on the android market were the most popular category of downloaded apps in the UK.
+								Based on your three answers above, what might you infer about each of the markets listed?
+
+								I might infer that there are definite differences on what apps are more popular in different parts of the world. These fluxuations might have a lot to do with culture. How the customs, traditions and core values of a society affect its citizens, will determine what apps they use and what they use them for. This information would be invaluable as a developer. It would give clear direction when thinking about what apps would have success in producing apps in a global market.
+
+						<strong>What is the average cost and bandwidth limit per user (in general) in each of the three markets? How may this impact development?</strong><br>
+								From the maximum PC website (Loub, 2013) comes these statistics regarding bandwidth restrictions around the world.<br>
+						<strong>Cost and bandwidth limits per user in:</strong>
+								The US-From the top three providers that were listed, AT & T, Comcast and Cox,<br>
+								The largest amount of bandwidth available was 250 gigabytes per month.<br>
+								The cost usually starts at around $20-$35 per month and increase in cost relative to the increased usage and is different for each company.<br>
+						<strong>Japan-</strong><br>
+								Here is an excerpt from the MaximumPC websites article on Japanese bandwidth pricing and limits information.<br>
+
+								It’s difficult to pinpoint down bandwidth limits in Japan, primarily as a result of this writer’s inability to speak Japanese,<br>
+								but we have managed to track down a few key details as to how Internet usage rates are set up.<br> 
+								Japanese carrier NTT Communications posts a warning to users on its OCN Hikari fiber-optic service (whose monthly cost ranges from approximately $48 to $82),<br>
+								noting that the company will consider restricting the use of anyone who pushes past 30 gigabytes of daily transfers. Think about that for a second: <strong>30 gigabytes</strong><br>
+								aaa. That’s almost an allowance of a terabyte of bandwidth per month. What are you going to download? The Internet?<br>
+								As far as we can tell, Japanese service provider ASAHI Net offers no bandwidth limitations for users of its DSL services—including download speeds of up to 50 Mbps and upload speeds of up to 5 Mbps for anywhere from $32 to $48 monthly.”<br>
+
+						<strong>The UK</strong><br>
+								From the top providers that were listed, AOL, BT and Virgin Media, there are packages that provide unlimited bandwidth but vary on pricing. Generally, the prices start in the $20 range and can go as high as $80 month.
+
+						<strong>And, finally, what would be your suggested strategy in project topic and global market choice? Feel free to have a first and second choice.</strong><br>
+								As a developer armed with this information, I would think that if I wanted to produce apps that would target a global market, I would need to produce more than one app. 
+						<strong>My first choice would be </strong>to develop a mash-up app that would include a utility portion such as camera, weather and geolocation, with lifestyle and entertainment potion such as show times, club events with their times and locations. I would deploy this app to the Asian market, specifically Japan and China where studies show these types of apps are most popular. 
+								In the Full-sail library I found an article on the re-development on New York City’s online homework website (Braun, 2010) called HowmeworkNYC Apps (BigAppleOnlineLibrary). It’s a suite of tools designed to provide around the clock help to the 1.3 million children and teens that are served by the library. 
+								The development team realized that the system was primarily being used by adults and not the children and teen age group that it was intended for. The team revamped the system and incorporated social media and found a dramatic increase I the library’s resources by the target age group.<br>
+
+						<strong>My second choice would be</strong> to develop an app that would integrate itself into the gaming platform somehow. Host a mobile website in the idea of Gamefly. Organize, purchase and deliver games to users. Organize their gaming options. You could think of different ideas focused around the central gaming theme without being a game developer. 
+								Studies show that gaming apps in the Northern hemisphere are the most popular and developing an app that focuses on this trend would be the wisest choice when developing a deployment strategy.<br>
+
+
+
+
+
+						<strong>RESOURCES:</strong><br>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+
+						<strong>CITATION GENERATOR</strong><br>
+
+								http://citationmachine.net/index2.php<br>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+
+						<strong>Global Media Statistics Page-Section 8-Artilce:</strong><br>
+
+						<strong>Global mobile statistics 2013 Section E: Mobile apps, app stores, pricing and failure rates</strong><br>
+								http://mobithinking.com/mobile-marketing-tools/latest-mobile-stats/e#popularappcatagories<br>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+
+						<strong>Japan, US and UK stats</strong><br>
+								Loub, S. (2013, February 21). Technology trends and news. Retrieved from http://www.maximumpc.com/article/features/how_bad_do_we_really_have_it_bandwidth_caps_around_world<br>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+
+						<strong>BigAppleOnlineLibrary</strong><br>
+
+								Braun, L. W. (2010, December). The big app: New york's libraries take homework help mobile--with a little help from their friends.<br>
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////<br>
+
+
+      						</p>
+      					</div>
+      				<footer data-role="footer" data-mini="true" data-position="fixed"></footer>
+      			</div>
+      		</div>
+      		</div>
   
   
-  					<!--Environment page-->
+  <!--Environment page-->
   			<div data-role="page" id="environment">
   				<header class="menu-wrapper">
     				<h1>
@@ -239,9 +368,10 @@ AVF-with Jen Mccarrick
     				</h1>
     			</header>
     
-    				<a data-role="button" data-mini="true" href="#startHere" data-ajax="false" class="button">
-      					Back Home
+    				<a data-role="button" data-mini="true" href="#startHere" data-ajax="false" class="homeButton">
+      					Back to Navigation page
     				</a>
+    				
     			 <div class="boxed">
     				<section data-role="listview" id="weatherTitle">
       					<h1>
@@ -268,26 +398,26 @@ AVF-with Jen Mccarrick
     					<div class="boxed">
   					
     					<p>
-      						<img src="iosImages/angleCompass.png" class="sectionImages" alt="weeklyResearch">
-  								<a data-ajax="false" data-role="button" data-mini="true" href="#compassPage" class="button">
-        							Compass
+      						<img src="iosImages/camera.png" class="sectionImages" alt="weeklyResearch">
+  								<a data-ajax="false" data-role="button" data-mini="true" href="#camera" class="research">
+        							Camera
       							</a>
     					</p>
     					<p>
       						<img src="iosImages/acc.png" class="sectionImages" alt="environment">
-  								<a data-ajax="false" data-role="button" data-mini="true" href="#accPage" class="button">
+  								<a data-ajax="false" data-role="button" data-mini="true" href="#accPage" class="research">
         							Accelorometer
       							</a>
     					</p>
     					<p>
       						<img src="iosImages/geo.png" class="sectionImages" alt="geo">
-  								<a data-ajax="false" data-role="button" data-mini="true" href="#geoPage" class="button">
+  								<a data-ajax="false" data-role="button" data-mini="true" href="#geoPage" class="research">
         							Geolocation
       							</a>
     					</p>
     					<p>
       						<img src="iosImages/camera.png" class="sectionImages" alt="camera">
-  								<a data-ajax="false" data-role="button" data-mini="true" href="#myDevicePage" class="button">
+  								<a data-ajax="false" data-role="button" data-mini="true" href="#myDevicePage" class="research">
         							My Device
       							</a>
     					</p>
@@ -301,8 +431,8 @@ AVF-with Jen Mccarrick
 				<header data-role="header" data-position="fixed">
   				</header>
   				<div class="boxed">
-  					<a data-role="button" data-mini="true" href="#startHere" data-ajax="false" class="button">
-    					Back Home
+  					<a data-role="button" data-mini="true" href="#environment" data-ajax="false" class="homeButton">
+    					Back
   					</a>
  				
 					<a data-role="button" data-mini="true" data-ajax="false" id="PageRefresh">
@@ -321,25 +451,61 @@ AVF-with Jen Mccarrick
    			</div>
   			<footer data-role="footer" data-position="fixed"></footer>
   		</div>
-  <!--Compass page-->
-  			<div data-role="page" id="compassPage">
+  <!--Camera Page-->
+  			<div data-role="page" id="camera">
 				<header data-role="header" data-position="fixed">
       				<h1>
-        				Compass Page
-    				</h1>
+        				Camera
+      				</h1>
   				</header>
-  					<a data-role="button" data-mini="true" href="#startHere" data-ajax="false" class="button">
-    					Back Home
+  					<a data-role="button" data-mini="true" class="homeButton" href="#environment" data-ajax="false">
+    					Back
   					</a>
-  					<div data-role="content">
+  				<section>
+  				<div class="boxed">
+  				<h3>
+  				
+  				Take a picture!
+  					<a data-role="button" data-mini="true" class="cameraButton" onclick="capturePhoto();" data-ajax="false">
+    					Take Picture
+  					</a>
   					
-            
-        			</div>
-  	
+  				</h3>
+  				<h3>
+  				Get a picture and the geolocation!
+  					<a data-role="button" data-mini="true" data-ajax="false" id="getPosAndPic">
+								Get a picture and the geolocation!
+					 </a>
+  				
+  				</h3>
+  				
+  				<section id="myPicLocal">
+  								<img style="display:none;width:180px;height:180px;" id="smallImage" src="#" alt="#"/>
+    							<img style="display:none;" id="largeImage" src="#" alt="#"/>
+  						</section>
+  				
+  				
+  				
+  				</div>
+             <div>
+    				<h3>
+    				Other options
+    				</h3>
+  					<a data-role="button" data-mini="true" class="cameraButton" onclick="getPhoto(pictureSource.PHOTOLIBRARY);" data-ajax="false">
+    					Take Picture for editing
+  					</a>
+  					<a data-role="button" data-mini="true" class="cameraButton" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" data-ajax="false">
+    					Retrieve pic from library
+  					</a>
+  					<a data-role="button" data-mini="true" class="cameraButton" onclick="getPhoto(pictureSource.SAVEDPHOTOALBUM);" data-ajax="false">
+    					Retrieve pic from Album
+  					</a>
+    		</div>
+  			</section>
+
   				<footer data-role="footer" data-position="fixed"></footer>
   			</div>
-  
-  
+  		
 <!--Accelorometer page-->
   	<div data-role="page" id="accPage">
 			<header data-role="header" data-position="fixed">
@@ -347,8 +513,8 @@ AVF-with Jen Mccarrick
         				Accelorometer Page
       				</h1>
   			</header>
-  					<a data-role="button" data-mini="true" href="#startHere" data-ajax="false" class="button">
-    					Back Home
+  					<a data-role="button" data-mini="true" href="#environment" data-ajax="false" class="homeButton">
+    					Back 
   					</a>
 
 	  	<div data-role="content">
@@ -387,17 +553,21 @@ AVF-with Jen Mccarrick
       				</h1>
   				</header>
   					<div>
-  						<a data-role="button" data-mini="true" class="button" href="#startHere" data-ajax="false">
-    					Back Home
+  						<a data-role="button" data-mini="true" class="homeButton" href="#environment" data-ajax="false">
+    					Back 
   						</a>
-  							<section 
-  						
-  								id="myLocal">
-  						
-  							</section>
-  					 	<a data-role="button" data-mini="true" data-ajax="false" id="GeoPageRefresh">
+  						<a data-role="button" data-mini="true" data-ajax="false" id="GeoPageRefresh">
 								Get Current Location
 					 	</a>
+  							 
+  					<div class="boxed">
+  						<section id="myLocal">
+  								
+  						</section>
+  						
+  					</div>
+  							
+  					 	
 					</div>
   				<footer data-role="footer" data-position="fixed"></footer>
   			</div>
@@ -408,20 +578,27 @@ AVF-with Jen Mccarrick
         				My Device Page
       				</h1>
   				</header>
-  					<a data-role="button" data-mini="true" class="button" href="#startHere" data-ajax="false">
-    					Back Home
+  					<a data-role="button" data-mini="true" class="homeButton" href="#environment" data-ajax="false">
+    					Back
   					</a>
   				<section>
   					
   					<h3>Verify your device and see if it's mobile ready</h3>
   					
   				</section>
-  					<a data-role="button" data-mini="true" data-ajax="false" id="getDevice" class="button">
-						Click me to see "What's my device"?
+  					<a data-role="button" data-mini="true" data-ajax="false" id="getDevice" class="research">
+						Select to see "What's my device"?
 					</a>
-					<a data-role="button" data-mini="true" data-ajax="false" id="connection" class="button">
-						Click me to see "My Connection status"?
+					<div id="device">
+					
+					</div>
+					
+					<a data-role="button" data-mini="true" data-ajax="false" id="connection" class="research">
+						Select to see "My Connection status"?
 					</a>
+					<div id="connection">
+  					
+  					</div>
   				<footer data-role="footer" data-position="fixed"></footer>
   			</div>
   
@@ -432,15 +609,27 @@ AVF-with Jen Mccarrick
         				My Mashup
       				</h1>
   				</header>
-  					<a data-role="button" data-mini="true" class="button" href="#startHere" data-ajax="false">
-    					Back Home
+  					<a data-role="button" data-mini="true" class="homeButton" href="#environment" data-ajax="false">
+    					Back
   					</a>
-  					<section id="mashupDisplay">
+  					<a data-role="button" data-mini="true" data-ajax="false" id="getGeoAndConnect" class="research">
+						Select to see your Connection Status & Your current location."
+					</a>
+					<div class="boxed"
+					<section id="GeoAndConnect">
+					
+					
+					</section>
+					<section id="geoConnection">
+					
+					
+					</section>
+					</div>
   					
-  					</section>
   				<footer data-role="footer" data-position="fixed"></footer>
   			</div>
-  	
+  			
+  		
   <!-- JavaScript under here -->
   <script src="iosMainjs/jquery-1.8.3.min.js"></script>
   <script src="iosMainjs/jquery.mobile-1.2.0.min.js"></script>
