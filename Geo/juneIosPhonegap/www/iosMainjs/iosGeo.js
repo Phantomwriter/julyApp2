@@ -419,7 +419,7 @@ $('#getDevice').on('click', function () {
 });
 
 //Get connection Status
-$('#connection').on('click', function () {
+$('#checkConnect').on('click', function () {
     checkConnection();
 
 });
